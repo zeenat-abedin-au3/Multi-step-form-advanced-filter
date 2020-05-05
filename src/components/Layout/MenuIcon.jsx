@@ -1,22 +1,15 @@
 import React from "react";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import { MenuIconX } from "./style";
 
 const MenuIcon = ({ collapsed, onClick }) => (
-  <div
-    onClick={onClick}
-    style={{
-      display: "flex",
-      alignItems: "center",
-      paddingLeft: "15px",
-      cursor: "pointer",
-    }}
-  >
+  <MenuIconX onClick={onClick}>
     {collapsed ? (
       <MenuUnfoldOutlined style={{ fontSize: "30px" }} />
     ) : (
       <MenuFoldOutlined style={{ fontSize: "30px" }} />
     )}
-  </div>
+  </MenuIconX>
 );
 
 export default MenuIcon;
