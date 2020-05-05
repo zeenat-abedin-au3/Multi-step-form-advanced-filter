@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Typography } from "antd";
+import { Typography, Menu } from "antd";
 
 const { Title } = Typography;
+const { Item } = Menu;
 
 export const MenuIconX = styled.div`
   display: flex;

@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import { FormOutlined, FilterOutlined } from "@ant-design/icons";
-import cLogo from "../../assets/logo.png";
+import { useHistory } from "react-router-dom";
 
-import "./style.css";
+import cLogo from "../../assets/logo.png";
 import MenuIcon from "./MenuIcon";
 import CustomTitle from "./CustomTitle";
+
+import "./style.css";
 
 const { Header, Sider, Content, Footer } = Layout;
 
 const MasterLayout = ({ children }) => {
+  const history = useHistory();
   const [collapsed, setCollapsed] = useState(false);
 
   const toggle = () => {
     setCollapsed(!collapsed);
   };
+
   return (
     <Layout style={{ height: "100vh" }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -22,10 +26,18 @@ const MasterLayout = ({ children }) => {
           <img src={cLogo} alt="pipesort" />
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1" icon={<FormOutlined />}>
+          <Menu.Item
+            key="1"
+            icon={<FormOutlined />}
+            onClick={() => history.push("/form")}
+          >
             Multi Step Form
           </Menu.Item>
-          <Menu.Item key="2" icon={<FilterOutlined />}>
+          <Menu.Item
+            key="2"
+            icon={<FilterOutlined />}
+            onClick={() => history.push("/filter")}
+          >
             Filter
           </Menu.Item>
         </Menu>
