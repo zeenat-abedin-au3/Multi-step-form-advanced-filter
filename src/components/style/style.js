@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Typography, Menu } from "antd";
+import { Typography, Row } from "antd";
 
 const { Title } = Typography;
-const { Item } = Menu;
 
 export const MenuIconX = styled.div`
   display: flex;
@@ -14,4 +13,12 @@ export const TitleX = styled(Title)`
   text-align: center;
   flex: 1;
   margin: 0px !important;
+`;
+
+export const Wrapper = styled(Row)`
+  margin: 20px 0;
+  padding: 2rem 4rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
 `;
