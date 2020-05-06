@@ -1,6 +1,6 @@
 import React from "react";
-import { TitleX } from "./style";
+import { TitleX } from "../style/style";
 
-const CustomTitle = () => <TitleX level={2}>Pipesort </TitleX>;
+const CustomTitle = ({ level, text }) => <TitleX level={level}>{text} </TitleX>;
 
 export default CustomTitle;

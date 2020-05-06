@@ -49,7 +49,7 @@ const MasterLayout = ({ children }) => {
           style={{ padding: 0, display: "flex", alignItems: "center" }}
         >
           <MenuIcon collapsed={collapsed} onClick={toggle} />
-          <CustomTitle />
+          <CustomTitle level={2} text="Pipesort" />
         </Header>
         <Content
           className="site-layout-background"

@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
-import { MenuIconX } from "./style";
+import { MenuIconX } from "../style/style";
 
 const MenuIcon = ({ collapsed, onClick }) => (
   <MenuIconX onClick={onClick}>
