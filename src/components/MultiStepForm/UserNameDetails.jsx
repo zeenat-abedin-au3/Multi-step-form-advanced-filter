@@ -21,6 +21,8 @@ const UserNameDetails = () => {
   const onChange = (e) => {
     dispatch(handleChange(e.target.name, e.target.value));
   };
+
+  const disable = !fullName || !email || !phone || !password;
   return (
     <Fragment>
       <Form name="basic" style={{ width: "100%" }}>
@@ -63,7 +65,11 @@ const UserNameDetails = () => {
         </InputX>
       </Form>
       <div>
-        <Button type="primary" onClick={() => dispatch(handleStepCount(2))}>
+        <Button
+          type="primary"
+          onClick={() => dispatch(handleStepCount(2))}
+          disabled={disable}
+        >
           Next {<ArrowRightOutlined />}
         </Button>
       </div>

@@ -1,4 +1,4 @@
-import { INPUT_CHANGE, STEP_COUNT } from "./type";
+import { INPUT_CHANGE, STEP_COUNT, CLEAR_FORM } from "./type";
 
 export const handleChange = (name, value) => ({
   type: INPUT_CHANGE,
@@ -8,4 +8,8 @@ export const handleChange = (name, value) => ({
 export const handleStepCount = (number) => ({
   type: STEP_COUNT,
   payload: number,
+});
+
+export const clearForm = () => ({
+  type: CLEAR_FORM,
 });
