@@ -21,4 +21,8 @@ export const Wrapper = styled(Row)`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+
+  @media (max-width: 540px) {
+    padding: 2rem 1rem;
+  }
 `;

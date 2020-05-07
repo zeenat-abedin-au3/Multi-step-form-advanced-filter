@@ -15,7 +15,12 @@ const MultiStepForm = () => {
 
   return (
     <Row>
-      <Col span={10} offset={6}>
+      <Col
+        xs={24}
+        sm={24}
+        md={{ span: 10, offset: 6 }}
+        lg={{ span: 8, offset: 7 }}
+      >
         <CustomTitle level={4} text="Multi step form" />
         <Wrapper>
           {step === 1 && <UserNameDetails />}
