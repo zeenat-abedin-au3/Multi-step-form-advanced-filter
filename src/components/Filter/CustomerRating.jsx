@@ -7,11 +7,13 @@ import data from "../../data/data.json";
 
 const CustomerRating = () => {
   const [ratingsData, setRatingsData] = useState([]);
+
   useEffect(() => {
     // will be coming from api
     const { ratings } = data;
     setRatingsData(ratings);
   }, []);
+
   const onChange = (selectdValues) => {
     console.log(selectdValues);
   };

@@ -6,3 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.ant-checkbox-group-item span:nth-child(2) {
+  vertical-align: middle;
+  font-size: 14px;
+  padding-left: 11px;
+  color: #212121;
+}

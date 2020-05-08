@@ -18,5 +18,39 @@
     { "value": "3", "label": "3★ & above" },
     { "value": "2", "label": "2★ & above" },
     { "value": "1", "label": "1★ & above" }
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "30",
+    "32",
+    "34",
+    "36",
+    "38",
+    "40",
+    "2XL",
+    "28",
+    "XXL Regular",
+    "XL Regular",
+    "S Regular",
+    "M Regular",
+    "L Regular"
+  ],
+  "mens": [
+    "T-Shirts",
+    "Shirts",
+    "Jeans",
+    "Sports Wear",
+    "Trousers",
+    "Inner Wear & Sleep Wear",
+    "Suits & Blazers",
+    "Cargos, Shorts & 3/4ths",
+    "Accessories & Combo Sets",
+    "Ethnic Wear",
+    "Fabrics",
+    "Winter & Seasonal Wear"
   ]
 }
