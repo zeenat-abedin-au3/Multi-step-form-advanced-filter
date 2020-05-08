@@ -26,3 +26,12 @@ export const PriceDiv = styled.div`
     align-items: center;
   }
 `;
+
+export const BrandDiv = styled.div`
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+`;
+
+export const CheckboxDiv = styled.div`
+  padding-top: 15px;
+`;
