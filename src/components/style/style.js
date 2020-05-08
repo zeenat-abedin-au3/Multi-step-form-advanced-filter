@@ -26,3 +26,10 @@ export const Wrapper = styled(Row)`
     padding: 2rem 1rem;
   }
 `;
+
+export const ShowMore = styled.p`
+  cursor: pointer;
+  color: #2874f0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`;

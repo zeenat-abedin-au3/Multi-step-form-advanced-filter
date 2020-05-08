@@ -4,6 +4,7 @@ import { Checkbox } from "antd";
 import data from "../../data/data.json";
 
 import { SizesDiv, FilterSectionTitle, CheckboxDiv } from "./style";
+import { ShowMore } from "../style/style";
 
 const Sizes = () => {
   const [sizesData, setSizesData] = useState([]);
@@ -31,6 +32,7 @@ const Sizes = () => {
         )}
       </CheckboxDiv>
       {/* Todo: Load more data */}
+      <ShowMore>Show 7 More</ShowMore>
     </SizesDiv>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Checkbox } from "antd";
 
 import { BrandDiv, FilterSectionTitle, CheckboxDiv } from "./style";
+import { ShowMore } from "../style/style";
 
 import data from "../../data/data.json";
 
@@ -31,6 +32,7 @@ const Brand = () => {
         )}
       </CheckboxDiv>
       {/* Todo: Load more data */}
+      <ShowMore>Show 10 More</ShowMore>
     </BrandDiv>
   );
 };

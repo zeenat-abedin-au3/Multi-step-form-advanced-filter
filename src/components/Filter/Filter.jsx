@@ -6,7 +6,7 @@ import FilterBar from "./FilterBar";
 const Filter = () => {
   return (
     <Row>
-      <Col span={7}>
+      <Col xs={24} sm={24} md={8} lg={6}>
         <FilterBar />
       </Col>
     </Row>
