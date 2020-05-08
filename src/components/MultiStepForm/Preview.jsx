@@ -42,9 +42,6 @@ const Preview = () => {
       </Card>
       <Card>
         <div>
-          {<Text strong={true}>Full Name:</Text>} {<Text>{fullName}</Text>}
-        </div>
-        <div>
           {<Text strong={true}>Age:</Text>} {<Text>{age}</Text>}
         </div>
         <div>
@@ -74,7 +71,7 @@ const Preview = () => {
         </div>
       </Card>
 
-      <div>
+      <div style={{ marginTop: "10px" }}>
         <Button
           type="primary"
           style={{ marginRight: "5px" }}

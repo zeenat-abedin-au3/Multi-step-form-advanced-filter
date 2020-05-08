@@ -17,7 +17,7 @@ const SubmissionResult = () => {
           key="again"
           onClick={() => dispatch(clearForm())}
         >
-          Do again
+          Do it again
         </Button>,
       ]}
     />

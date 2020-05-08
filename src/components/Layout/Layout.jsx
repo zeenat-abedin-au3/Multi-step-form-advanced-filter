@@ -23,13 +23,19 @@ const MasterLayout = ({ children }) => {
     setCollapsed(!collapsed);
   };
 
+  const pName = history.location.pathname.replace("/", "");
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
           <img src={cLogo} alt="pipesort" />
         </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+        <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={pName === "filter" ? ["2"] : ["1"]}
+        >
           <Menu.Item
             key="1"
             icon={<FormOutlined />}

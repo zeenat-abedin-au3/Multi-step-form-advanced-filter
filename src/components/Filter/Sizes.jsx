@@ -37,7 +37,7 @@ const Sizes = () => {
       <CheckboxDiv>
         {sizesData.length && (
           <Checkbox.Group
-            options={loadMore ? sizesData : sizesData.splice(0, 5)}
+            options={loadMore ? sizesData : sizesData.slice(0, 5)}
             onChange={onChange}
             style={{
               display: "flex",
