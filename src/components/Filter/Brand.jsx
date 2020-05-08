@@ -9,7 +9,7 @@ const Brand = () => {
   const [brandsData, setBrandsData] = useState([]);
 
   useEffect(() => {
-    // Later data will be coming from database
+    // Later data will be coming from api
     const { brands } = data;
 
     setBrandsData(brands);
