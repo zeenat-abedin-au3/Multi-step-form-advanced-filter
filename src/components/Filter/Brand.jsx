@@ -8,6 +8,7 @@ import data from "../../data/data.json";
 
 const Brand = () => {
   const [brandsData, setBrandsData] = useState([]);
+  const [loadMore, setLoadMore] = useState(false);
 
   useEffect(() => {
     // Later data will be coming from api
@@ -19,20 +20,37 @@ const Brand = () => {
   const onChange = (selectedValues) => {
     console.log(selectedValues);
   };
+
+  const handleLoadMore = () => {
+    setLoadMore(true);
+  };
+  const handleLess = () => {
+    setLoadMore(false);
+  };
   return (
     <BrandDiv>
       <FilterSectionTitle>Brands</FilterSectionTitle>
       <CheckboxDiv>
         {brandsData.length && (
           <Checkbox.Group
-            options={brandsData.splice(0, 5)}
+            options={loadMore ? brandsData : brandsData.slice(0, 5)}
             onChange={onChange}
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              maxHeight: "120px",
+              overflowY: "auto",
+            }}
           />
         )}
       </CheckboxDiv>
-      {/* Todo: Load more data */}
-      <ShowMore>Show 10 More</ShowMore>
+      {loadMore ? (
+        <ShowMore onClick={handleLess}>Show less</ShowMore>
+      ) : (
+        <ShowMore onClick={handleLoadMore}>
+          Show {brandsData.length - 5} More
+        </ShowMore>
+      )}
     </BrandDiv>
   );
 };

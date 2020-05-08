@@ -46,12 +46,11 @@ const Categories = () => {
           />
         )}
       </CheckboxDiv>
-      {/* Todo: Load more data */}
       {loadMore ? (
         <ShowMore onClick={handleLess}>Show less</ShowMore>
       ) : (
         <ShowMore onClick={handleLoadMore}>
-          Show {categoriesData.length - loadMore} More
+          Show {categoriesData.length - 5} More
         </ShowMore>
       )}
     </CategoriesDiv>
