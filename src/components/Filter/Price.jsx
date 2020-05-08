@@ -1,34 +1,40 @@
 import React from "react";
 import { Slider, Select } from "antd";
+import { useDispatch, useSelector } from "react-redux";
 
 import { FilterSectionTitle, PriceDiv } from "./style";
+import { filterChange } from "../../redux/actions/filter";
 
 const { Option } = Select;
 
 const Price = () => {
+  const dispatch = useDispatch();
+  const { price } = useSelector((state) => state.filterReducer);
+
   const handleSlider = (value) => {
-    console.log(value);
+    dispatch(filterChange("price", value));
   };
   const handleMinValue = (value) => {
-    console.log(value);
+    dispatch(filterChange("price", [+value, +price[1]]));
   };
   const handleMaxValue = (value) => {
-    console.log(value);
+    dispatch(filterChange("price", [+price[0], +value]));
   };
+
   return (
     <PriceDiv>
       <FilterSectionTitle>Price</FilterSectionTitle>
       <Slider
         range
         step={500}
-        defaultValue={[0, 8000]}
+        defaultValue={price}
         min={0}
         max={8000}
         onChange={handleSlider}
       />
       <div className="min-max">
         <Select
-          defaultValue="0"
+          defaultValue={String(price[0])}
           style={{ width: 80 }}
           onChange={handleMinValue}
         >
@@ -40,12 +46,14 @@ const Price = () => {
         </Select>
         <span>to</span>
         <Select
-          defaultValue="8000"
+          defaultValue={String(price[1])}
           style={{ width: 80 }}
           onChange={handleMaxValue}
         >
           <Option value="3000">3000</Option>
-          <Option value="6000">6000</Option>
+          <Option value="6000" selected>
+            6000
+          </Option>
           <Option value="8000">8000</Option>
         </Select>
       </div>

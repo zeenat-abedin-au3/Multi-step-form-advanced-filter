@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Checkbox } from "antd";
+import { useDispatch } from "react-redux";
 
 import { BrandDiv, FilterSectionTitle, CheckboxDiv } from "./style";
 import { ShowMore } from "../style/style";
 
 import data from "../../data/data.json";
+import { filterChange } from "../../redux/actions/filter";
 
 const Brand = () => {
+  const dispatch = useDispatch();
+
   const [brandsData, setBrandsData] = useState([]);
   const [loadMore, setLoadMore] = useState(false);
 
@@ -18,7 +22,7 @@ const Brand = () => {
   }, []);
 
   const onChange = (selectedValues) => {
-    console.log(selectedValues);
+    dispatch(filterChange("brands", selectedValues));
   };
 
   const handleLoadMore = () => {

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Checkbox } from "antd";
+import { useDispatch } from "react-redux";
 
 import { RatingDiv, FilterSectionTitle, CheckboxDiv } from "./style";
 
 import data from "../../data/data.json";
+import { filterChange } from "../../redux/actions/filter";
 
 const CustomerRating = () => {
+  const dispatch = useDispatch();
   const [ratingsData, setRatingsData] = useState([]);
 
   useEffect(() => {
@@ -15,7 +18,7 @@ const CustomerRating = () => {
   }, []);
 
   const onChange = (selectdValues) => {
-    console.log(selectdValues);
+    dispatch(filterChange("ratings", selectdValues));
   };
 
   return (
