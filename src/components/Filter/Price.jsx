@@ -29,7 +29,7 @@ const Price = () => {
       <div className="min-max">
         <Select
           defaultValue="0"
-          style={{ maxWidth: 100 }}
+          style={{ width: 80 }}
           onChange={handleMinValue}
         >
           <Option value="0">0</Option>
@@ -41,7 +41,7 @@ const Price = () => {
         <span>to</span>
         <Select
           defaultValue="8000"
-          style={{ maxWidth: 100 }}
+          style={{ width: 80 }}
           onChange={handleMaxValue}
         >
           <Option value="3000">3000</Option>
