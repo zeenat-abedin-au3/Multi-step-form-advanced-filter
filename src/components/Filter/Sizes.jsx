@@ -8,6 +8,7 @@ import { ShowMore } from "../style/style";
 
 const Sizes = () => {
   const [sizesData, setSizesData] = useState([]);
+  const [loadMore, setLoadMore] = useState(false);
 
   useEffect(() => {
     // will be coming from api
@@ -19,20 +20,37 @@ const Sizes = () => {
     console.log(selectedSizes);
   };
 
+  const handleLoadMore = () => {
+    setLoadMore(true);
+  };
+  const handleLess = () => {
+    setLoadMore(false);
+  };
+
   return (
     <SizesDiv>
       <FilterSectionTitle>SIZE</FilterSectionTitle>
       <CheckboxDiv>
         {sizesData.length && (
           <Checkbox.Group
-            options={sizesData.splice(0, 5)}
+            options={loadMore ? sizesData : sizesData.splice(0, 5)}
             onChange={onChange}
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              maxHeight: "120px",
+              overflowY: "auto",
+            }}
           />
         )}
       </CheckboxDiv>
-      {/* Todo: Load more data */}
-      <ShowMore>Show 7 More</ShowMore>
+      {loadMore ? (
+        <ShowMore onClick={handleLess}>Show less</ShowMore>
+      ) : (
+        <ShowMore onClick={handleLoadMore}>
+          Show {sizesData.length - 5} More
+        </ShowMore>
+      )}
     </SizesDiv>
   );
 };
