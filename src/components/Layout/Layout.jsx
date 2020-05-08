@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import { FormOutlined, FilterOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
@@ -14,6 +14,10 @@ const { Header, Sider, Content, Footer } = Layout;
 const MasterLayout = ({ children }) => {
   const history = useHistory();
   const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    window.screen.width <= 992 ? setCollapsed(true) : setCollapsed(false);
+  }, []);
 
   const toggle = () => {
     setCollapsed(!collapsed);

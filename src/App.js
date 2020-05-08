@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import MasterLayout from "./components/Layout/Layout";
-import Filter from "./components/Filter/Filter";
+import Filter from "./components/Filter";
 import MultiStepForm from "./components/MultiStepForm/MultiStepForm";
 
 const App = () => {

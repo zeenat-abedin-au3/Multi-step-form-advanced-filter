@@ -7,7 +7,7 @@ import Preview from "./Preview";
 const Filter = () => {
   return (
     <Row gutter={32}>
-      <Col xs={24} sm={24} md={16} lg={10} xl={6}>
+      <Col xs={24} sm={24} md={12} lg={10} xl={6}>
         <FilterBar />
       </Col>
       <Col xs={24} sm={24} md={7} lg={12} xl={16}>
