@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import { FormOutlined, FilterOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import cLogo from "../../assets/logo.png";
 import MenuIcon from "./MenuIcon";
@@ -15,9 +16,13 @@ const MasterLayout = ({ children }) => {
   const history = useHistory();
   const [collapsed, setCollapsed] = useState(false);
 
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 992px)",
+  });
+
   useEffect(() => {
-    window.screen.width <= 992 ? setCollapsed(true) : setCollapsed(false);
-  }, []);
+    isDesktop ? setCollapsed(false) : setCollapsed(true);
+  }, [isDesktop]);
 
   const toggle = () => {
     setCollapsed(!collapsed);
