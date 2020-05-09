@@ -10,7 +10,7 @@ describe("Filter reducer unit test", () => {
     sizes: [],
   };
 
-  it("should return an empty array when inital state and action is undefined", () => {
+  it("should return an INITIAL STATE when inital state and action is undefined", () => {
     expect(filterReducer(undefined, {})).not.toEqual([]);
     expect(filterReducer(undefined, {})).toEqual(INITAL_STATE);
   });
