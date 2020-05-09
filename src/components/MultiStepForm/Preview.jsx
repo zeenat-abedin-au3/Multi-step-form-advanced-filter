@@ -26,7 +26,7 @@ const Preview = () => {
   } = useSelector((state) => state.formReducer);
   return (
     <Fragment>
-      <Card>
+      <Card style={{ width: "100%" }}>
         <div>
           {<Text strong={true}>Full Name:</Text>} {<Text>{fullName}</Text>}
         </div>
@@ -40,7 +40,7 @@ const Preview = () => {
           {<Text strong={true}>Password:</Text>} {<Text>{password}</Text>}
         </div>
       </Card>
-      <Card>
+      <Card style={{ width: "100%", margin: "10px 0" }}>
         <div>
           {<Text strong={true}>Age:</Text>} {<Text>{age}</Text>}
         </div>
@@ -56,7 +56,7 @@ const Preview = () => {
           ""
         )}
       </Card>
-      <Card>
+      <Card style={{ width: "100%" }}>
         <div>
           {<Text strong={true}>Address:</Text>} {<Text>{address}</Text>}
         </div>
