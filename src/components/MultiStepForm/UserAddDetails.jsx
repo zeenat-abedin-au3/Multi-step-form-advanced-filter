@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 
 import InputX from "../Common/InputX";
-import { handleStepCount, handleChange } from "../../redux/actions/forn";
+import { handleStepCount, handleChange } from "../../redux/actions/form";
 
 const UserAddDetails = () => {
   const dispatch = useDispatch();

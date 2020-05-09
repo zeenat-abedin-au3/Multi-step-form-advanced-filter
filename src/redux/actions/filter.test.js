@@ -1,7 +1,7 @@
 import * as actions from "./filter";
 import { FILTER_CHANGE } from "./type";
 
-describe("Test suite for filter actions", () => {
+describe("Test suite for filter's actions", () => {
   it("should create an action to change filter value", () => {
     const filterName = "price";
     const filterValue = [500, 6000];

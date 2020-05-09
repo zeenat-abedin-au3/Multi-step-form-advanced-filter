@@ -2,7 +2,7 @@ import React from "react";
 import { Result, Button } from "antd";
 import { useDispatch } from "react-redux";
 
-import { clearForm } from "../../redux/actions/forn";
+import { clearForm } from "../../redux/actions/form";
 
 const SubmissionResult = () => {
   const dispatch = useDispatch();

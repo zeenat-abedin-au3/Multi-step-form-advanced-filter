@@ -3,7 +3,7 @@ import { Card, Typography, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 
-import { handleStepCount } from "../../redux/actions/forn";
+import { handleStepCount } from "../../redux/actions/form";
 
 const { Text } = Typography;
 
